@@ -9,7 +9,7 @@ module RSpec::Rails
         end
 
         # Why is this weird? See https://github.com/rspec/rspec-core/issues/460
-        group.new.__should_for_example_group__ respond_to(:render_widget)
+        # group.new.__should_for_example_group__ respond_to(:render_widget)
       end
     end
 

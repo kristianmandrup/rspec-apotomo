@@ -6,7 +6,13 @@ module Rspec
       source_root File.expand_path('../templates', __FILE__)
 
       def create_cell_spec_file
-        template "widget_spec.erb", File.join("spec/widgets/", class_path, "#{file_name}_widget_spec.rb")
+        template "widget_spec.erb", File.join(spec_path, "#{file_name}_widget_spec.rb")
+      end
+
+      protected
+
+      def spec_path
+        File.join("spec/widgets/", class_path, file_name)
       end
     end
   end
